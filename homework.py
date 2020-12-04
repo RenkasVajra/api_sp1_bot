@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
+logging.basicConfig(filemode='w', level=logging.DEBUG)
 PRAKTIKUM_TOKEN = os.getenv('PRAKTIKUM_TOKEN')
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
@@ -72,7 +72,6 @@ def main():
             time.sleep(300)  
 
         except Exception as e:
-            logging.basicConfig(filemode='w', level=logging.DEBUG)
             logging.debug('This is a debug message')
             time.sleep(5)
 
